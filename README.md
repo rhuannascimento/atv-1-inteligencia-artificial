@@ -11,6 +11,12 @@ O Teorema das 4 Cores estabelece que é possível colorir os vértices de qualqu
 - **/instances**: Contém os arquivos de entrada que representam os grafos a serem resolvidos.
 - **/images**: Contém as imagens dos grafos antes e depois da aplicação dos algoritmos.
 
+## Padrões de commit
+   - **FEAT**: Funcionalidade nova.
+   - **REFACT**: Melhoria no código.
+   - **FIX**: Correção no código.
+   - **CHORE**: Alterações minimas sem impacto nas funcionalidades.
+
 ## Exemplos de Grafos Resolvidos
 1. **Grafo 1**: [Imagem antes da resolução]
 
