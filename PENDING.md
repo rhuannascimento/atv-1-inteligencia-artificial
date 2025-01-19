@@ -1,0 +1,6 @@
+- [ ] Busca Backtracking
+- [ ] Busca em largura
+- [ ] Busca em profundidade
+- [ ] Busca Ordenada
+- [ ] Busca Gulosa
+- [ ] Busca A*
