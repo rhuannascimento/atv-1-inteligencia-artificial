@@ -10,17 +10,23 @@ class Edge {
     private:
         Node* destinationNode = nullptr;
         Node* sourceNode = nullptr;
+        Edge* nextEdge = nullptr;
+        int weight;
 
     public:
-        Edge(int id);
+        Edge(int id, Node* sourceNode, Node* destinationNode);
+        Edge(int id, int weight, Node* sourceNode, Node* destinationNode);
         ~Edge();
 
         Node* getDestinationNode(){return destinationNode;}
         Node* getSourceNode(){return sourceNode;}
-
+        Edge* getNextEdge(){return nextEdge;}
+        int getWeight(){return weight;} 
         
-        void setDestinationNode(Node* payload){destinationNode = payload;}
-        void setSourceNode(Node* payload){sourceNode = payload;}
+        void setWeight(int payload){weight = payload;} 
+        void setDestinationNode(Node* payload);
+        void setSourceNode(Node* payload);
+        void setNextEdge(Edge* payload);
 
 };
 

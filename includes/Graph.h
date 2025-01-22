@@ -9,15 +9,20 @@ class Node;
 class Graph {
 private:
     
-    Node *root = nullptr;
+    Node* rootNode = nullptr;
+    Node* lastNode = nullptr;
 
 public:
     Graph();
     ~Graph();
 
-    Node* getRoot(){return root;};
+    Node* getRootNode(){return rootNode;};
+    Node* getLastNode(){return lastNode;};
     
-    void setRoot(Node* payload){root = payload;};
+    void insertNode(Node* node);
+    void setRootNode(Node* node);
+    void setLastNode(Node* node);
+
 };
 
 #endif // GRAPH_H
