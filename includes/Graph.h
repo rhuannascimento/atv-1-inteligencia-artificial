@@ -20,8 +20,6 @@ public:
     Node* getLastNode(){return lastNode;};
     
     void insertNode(Node* node);
-    void setRootNode(Node* node);
-    void setLastNode(Node* node);
 
 };
 
