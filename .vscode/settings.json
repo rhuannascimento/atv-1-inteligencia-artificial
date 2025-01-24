@@ -2,6 +2,18 @@
     "files.associations": {
         "*.tcc": "cpp",
         "format": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "new": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "charconv": "cpp",
+        "system_error": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "*.idl": "cpp"
     }
 }

@@ -1,4 +1,4 @@
-#include "../includes/Edge.h"
+#include "../include/Edge.h"
 
 Edge::Edge(int sourceNodeId, int destinationNodeId){
     this->sourceNodeId = sourceNodeId;
