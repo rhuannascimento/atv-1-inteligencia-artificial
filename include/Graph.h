@@ -21,11 +21,13 @@ public:
 
     Node* getRootNode(){return rootNode;}
     Node* getLastNode(){return lastNode;}
+    Node* getNodeById(int id);
     int getDimension(){return dimension;}
 
     void setDimension(int payload){dimension = payload;}
     void insertNode(Node* node);
     void creatChartByFile(string filePath);
+    void saveAdjacencyListToFile(string filePath);
 
 };
 
