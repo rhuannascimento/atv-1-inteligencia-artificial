@@ -48,7 +48,7 @@ Node* Graph::getNodeById(int id){
     return nullptr;
 }
 
-void Graph::creatChartByFile(string filePath){
+void Graph::creatGraphByFile(string filePath){
     ifstream archive(filePath);
     
     if (!archive.is_open()){
@@ -77,12 +77,8 @@ void Graph::creatChartByFile(string filePath){
                 iss >> readValue;
                 int targetNodeId = stoi(readValue);
 
-                // cout<< sourceNodeId << " - " << targetNodeId << "\n";
-                
                 Node* sourceNode = this->getNodeById(sourceNodeId);
                 Node* targetNode = this->getNodeById(targetNodeId);
-
-                // cout<< sourceNode << " - " << targetNode << "\n";
 
                 if(sourceNode == nullptr){
                     sourceNode = new Node(sourceNodeId);
@@ -94,14 +90,10 @@ void Graph::creatChartByFile(string filePath){
                     this->insertNode(targetNode);
                 }
 
-                // cout<< sourceNode->getId() << " - " << targetNode->getId() << "\n";
-
-
                 Edge* edgeSourceToTarget = new Edge(sourceNode->getId(), targetNode->getId());
                 Edge* edgeTargetToSource = new Edge(targetNode->getId(), sourceNode->getId());
                 sourceNode->insertEdge(edgeSourceToTarget);
                 targetNode->insertEdge(edgeTargetToSource);
-
             }
 
             if(readValue == "DIMENSION"){

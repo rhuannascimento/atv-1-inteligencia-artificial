@@ -26,7 +26,7 @@ public:
 
     void setDimension(int payload){dimension = payload;}
     void insertNode(Node* node);
-    void creatChartByFile(string filePath);
+    void creatGraphByFile(string filePath);
     void saveAdjacencyListToFile(string filePath);
 
 };
