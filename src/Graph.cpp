@@ -41,18 +41,28 @@ void Graph::creatChartByFile(string filePath){
 
     string line;
     string readValue;
+    bool isDimensionReadTime = false;
+    bool isGraphReadTime = false;
     
     while (getline(archive, line)){
         istringstream iss(line);
 
         if (!line.empty()){
             iss >> readValue;
-            
-            if(readValue == "DIMENSION"){
+
+            if(isDimensionReadTime){
                 int dimension = 0;
-                iss >> readValue;
                 dimension = stoi(readValue);
-                this->setDimension(dimension); 
+                this->setDimension(dimension);
+                isDimensionReadTime = false; 
+            }else if(isGraphReadTime){
+                cout<<readValue<<"\n";
+            }
+
+            if(readValue == "DIMENSION"){
+                isDimensionReadTime = true; 
+            } else if(readValue == "GRAPH"){
+                isGraphReadTime = true; 
             }
         }
     }
