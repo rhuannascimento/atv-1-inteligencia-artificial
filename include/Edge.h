@@ -18,8 +18,8 @@ class Edge {
         Edge(int sourceNodeId, int destinationNodeId, int weight);
         ~Edge();
 
-        int getDestinationNode(){return destinationNodeId;}
-        int getSourceNode(){return sourceNodeId;}
+        int getDestinationNodeId(){return destinationNodeId;}
+        int getSourceNodeId(){return sourceNodeId;}
         Edge* getNextEdge(){return nextEdge;}
         int getWeight(){return weight;} 
         
