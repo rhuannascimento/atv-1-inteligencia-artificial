@@ -30,7 +30,8 @@ class Solution {
         Tree* tree;
 
     public:
-        
+        Solution(list<Color> colors, Graph* graph);
+        ~Solution();
 
 };
 

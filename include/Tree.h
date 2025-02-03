@@ -14,7 +14,7 @@ class Tree {
         Node* rootNode;
 
     public:
-        
+
 
 };
 
