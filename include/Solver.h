@@ -1,7 +1,6 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 #include <iostream>
-#include <list>
 #include <functional>
 #include "Graph.h"
 #include "Tree.h"
@@ -18,11 +17,23 @@ struct Rule{
     function<bool()> rule;
 };
 
+struct Color{
+    string name;
+    int id;
+    int usedTimesCounter;
+};
+
+
+struct Solution{
+    Graph* graph;
+    list<Node*> solutionArray;
+    int usedTimesCounter;
+};
+
 class Graph;
 class Tree;
 
-
-class Solution {
+class Solver {
     private:
         list<Color> colors;
         list<Rule> rules;
@@ -30,8 +41,10 @@ class Solution {
         Tree* tree;
 
     public:
-        Solution(list<Color> colors, Graph* graph);
-        ~Solution();
+        Solver(list<Color> colors, Graph* graph);
+        ~Solver();
+
+        backTRacking
 
 };
 
