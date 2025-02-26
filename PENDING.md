@@ -4,3 +4,4 @@
 - [ ] Busca Ordenada
 - [ ] Busca Gulosa
 - [ ] Busca A*
+- [ ] Busca IDA*

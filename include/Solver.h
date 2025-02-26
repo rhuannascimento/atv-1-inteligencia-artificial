@@ -1,9 +1,11 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 #include <iostream>
+#include <list>
 #include <functional>
 #include "Graph.h"
 #include "Tree.h"
+#include "Node.h"
 
 using namespace std;
 
@@ -13,8 +15,8 @@ struct Color{
     int usedTimesCounter;
 };
 
-struct Rule{
-    function<bool()> rule;
+struct Rule {
+    function<bool(Node*)> rule;
 };
 
 struct Color{
@@ -27,11 +29,13 @@ struct Color{
 struct Solution{
     Graph* graph;
     list<Node*> solutionArray;
-    int usedTimesCounter;
+    int cost = 0;
+    Tree* tree;
 };
 
 class Graph;
 class Tree;
+class Node;
 
 class Solver {
     private:
@@ -44,7 +48,7 @@ class Solver {
         Solver(list<Color> colors, Graph* graph);
         ~Solver();
 
-        backTRacking
+        Solution backTRacking();
 
 };
 
